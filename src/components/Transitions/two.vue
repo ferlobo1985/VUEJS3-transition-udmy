@@ -22,6 +22,24 @@
             >ON</div>
         </transition>
 
+        <hr/>
+
+        <button class="btn btn-primary" @click="library = !library">
+            Toggle library anim
+        </button>
+        <transition
+            name="custom-class-not-to-confuse-with-other-ones"
+            enter-active-class="animate__animated animate__backInDown"
+            leave-active-class="animate__animated animate__backOutLeft"
+        >
+              <div
+                class="p-3 mb-2 bg-info text-white"
+                v-if="library"
+            >Hello</div>
+        </transition>
+
+     
+
     </div>
 </template>
 
@@ -29,7 +47,8 @@
     export default {
         data(){
             return {
-                status: false
+                status: false,
+                library: false
             }
         }
     }
