@@ -3,7 +3,7 @@
     <transition>
         <div 
             class="p-3 mb-2 bg-success text-white"
-            v-if="display"
+            v-show="display"
         >
             Hello    
         </div>
