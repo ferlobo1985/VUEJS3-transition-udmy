@@ -11,7 +11,7 @@
     <hr/>
     <div>
         <ul class="pl-0">
-            <transition-group name="fade">
+            <transition-group name="fade" appear>
                 <li
                     class="list-group-item"
                     v-for="(item,index) in list"
@@ -22,13 +22,26 @@
                 </li>
             </transition-group>
         </ul>
+
+        <hr/>
+
+        <transition name="fade" appear="">
+            <comp-hello></comp-hello>
+        </transition>
+
+
     </div>
 
 </template>
 
 
 <script>
+    import compHello from './hello.vue';
+
     export default {
+        components:{
+            compHello
+        },
         data(){
             return{
                 list:['Francis','Ron','Martha'],
